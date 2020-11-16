@@ -30,7 +30,7 @@ List of compatible USB wifi in Linux
 - Support 2.4 GHz
 - Product: https://www.tp-link.com/us/home-networking/usb-adapter/tl-wn722n/
 - Tested OS: `Ubuntu 20.04`, `Ubuntu 18.04`
-- Driver: `8188eu`, can be found here: https://github.com/lwfinger/rtl8188eu.git
+- Driver: `8188eu`, can be found here: https://github.com/aircrack-ng/rtl8188eus
 
 
 
