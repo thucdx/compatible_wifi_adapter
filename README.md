@@ -32,6 +32,39 @@ List of compatible USB wifi in Linux
 - Tested OS: `Ubuntu 20.04`, `Ubuntu 18.04`
 - Driver: `8188eu`, can be found here: https://github.com/aircrack-ng/rtl8188eus
 
+### 4. [TL-WN725N](https://www.amazon.com/TP-Link-wireless-network-Adapter-SoftAP/dp/B008IFXQFU)
+- Product: https://www.amazon.com/TP-Link-wireless-network-Adapter-SoftAP/dp/B008IFXQFU
+- Tested OS: `Ubuntu 20.04`, `Ubuntu 18.04`
+- Driver: `8188eu`, can be found here: https://github.com/aircrack-ng/rtl8188eus
+
+Install instruction for Ubuntu
+
+```
+// Update and installed prerequisite components
+sudo apt update
+sudo apt-get install build-essential
+sudo apt install bc
+// Remove old module 
+sudo rmmod r8188eu.ko
+sudo rmmod 8188eu.ko
+
+// Build module from source
+git clone https://github.com/aircrack-ng/rtl8188eus
+cd rtl8188eus
+
+make
+sudo make install
+
+// Load module to kernel
+sudo modprobe 8188eu
+
+// Load kernel at boot time (just to make sure the module is loaded)
+sudo vim /etc/modules => add 8188eu  => save
+
+sudo reboot
+```
+
+
 
 
 
